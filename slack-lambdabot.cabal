@@ -10,25 +10,20 @@ cabal-version:       >=1.10
 
 executable slack-lambdabot
   main-is:             Main.hs
-  other-modules:       Modules
+  other-modules:       Config
+                     , Modules
   hs-source-dirs:      src
-  build-depends:       base >=4.7 && <4.9,
-                       deepseq ==1.4.1.1,
-                       html-entities ==1.1.0.0,
-                       lambdabot-core ==5.0.3,
-                       lambdabot-haskell-plugins ==5.0.3,
-                       lambdabot-irc-plugins ==5.0.3,
-                       lambdabot-misc-plugins ==5.0.1,
-                       lambdabot-novelty-plugins ==5.0.3,
-                       lambdabot-reference-plugins ==5.0.3,
-                       lambdabot-social-plugins ==5.0.1,
-                       lambdabot-trusted ==5.0.2.1,
-                       lens,
-                       parsec ==3.1.9,
-                       silently ==1.2.5,
-                       slack-api ==0.6,
-                       text,
-                       transformers >=0.3,
-                       utf8-string ==1.0.1.1
+  build-depends:       base >= 4.7
+                     , configurator
+                     , html-entities
+                     , lambdabot-core
+                     , lambdabot-haskell-plugins
+                     , lambdabot-trusted
+                     , lens
+                     , silently
+                     , slack-api
+                     , text
+                     , transformers
+                     , utf8-string
   ghc-options:         -O2 -Wall -fno-warn-unused-do-bind -threaded
   default-language:    Haskell2010
